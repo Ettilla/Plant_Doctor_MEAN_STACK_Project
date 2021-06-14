@@ -27,25 +27,28 @@ router.post("/signup", (req, res, next) => {
       });
   });
 });
-
+//Verifying the user input email
 router.post("/login", (req, res, next) => {
   let fetchedUser;
   User.findOne({ email: req.body.email })
+  //Checking user existence
     .then(user => {
       if (!user) {
         return res.status(401).json({
-          message: "Auth failed"
+          message: "Authentication failed"
         });
       }
       fetchedUser = user;
+      //Bcrypt the input value
       return bcrypt.compare(req.body.password, user.password);
     })
     .then(result => {
       if (!result) {
         return res.status(401).json({
-          message: "Auth failed"
+          message: "Authentication failed"
         });
       }
+      //Tokenization
       const token = jwt.sign(
         { email: fetchedUser.email, userId: fetchedUser._id },
         "secret_this_should_be_longer",
@@ -57,7 +60,7 @@ router.post("/login", (req, res, next) => {
     })
     .catch(err => {
       return res.status(401).json({
-        message: "Auth failed"
+        message: "Authentication failed"
       });
     });
 });
