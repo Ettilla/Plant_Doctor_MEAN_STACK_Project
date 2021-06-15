@@ -27,40 +27,40 @@ router.post("/signup", (req, res, next) => {
       });
   });
 });
-//Verifying the user input email
+
 router.post("/login", (req, res, next) => {
   let fetchedUser;
   User.findOne({ email: req.body.email })
-  //Checking user existence
     .then(user => {
       if (!user) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Auth failed"
         });
       }
       fetchedUser = user;
-      //Bcrypt the input value
       return bcrypt.compare(req.body.password, user.password);
     })
     .then(result => {
+      console.log(result);
       if (!result) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Auth failed"
         });
       }
-      //Tokenization
       const token = jwt.sign(
         { email: fetchedUser.email, userId: fetchedUser._id },
         "secret_this_should_be_longer",
         { expiresIn: "1h" }
       );
+      console.log(token);
       res.status(200).json({
         token: token
       });
     })
     .catch(err => {
+      console.log(err);
       return res.status(401).json({
-        message: "Authentication failed"
+        message: "Auth failed"
       });
     });
 });
