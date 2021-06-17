@@ -1,4 +1,4 @@
-# Dr_Agro_MEAN_STACK_Project
+# Plant_Doctor MEAN_Stack_Project
 
 Here I have tried to build a FULLSTACK project. 
 I have used MEAN STACK here where Angular is for frontend, Node.js, Express.js for backend & MongoDB for Database.
