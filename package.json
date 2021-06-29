@@ -1,0 +1,27 @@
+{
+  "name": "dr_agro_mean_stack-",
+  "version": "1.0.0",
+  "description": "Here I have tried to build a FULLSTACK project. \r I have used MEAN STACK here where Angular is for frontend, Node.js, Express.js for backend & MongoDB for Database.\r For building up the entire project, I took help from different tutorials on YouTube along with different blog posts. I have also mentioned them below.",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/cli": "^12.1.0",
+    "bcrypt": "^5.0.1",
+    "connect": "^3.7.0",
+    "mongoose-unique-validator": "^2.0.3",
+    "serve-static": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ettilla/Dr_Agro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ettilla/Dr_Agro/issues"
+  },
+  "homepage": "https://github.com/Ettilla/Dr_Agro#readme"
+}

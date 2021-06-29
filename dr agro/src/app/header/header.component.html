@@ -1,17 +1,17 @@
 <mat-toolbar color="primary">
   <span>
-    <a routerLink="/">Uploaded Disease Samples</a>
+    <a routerLink="/">Updated Sample Diseases</a>
   </span>
   <span class="spacer"></span>
   <ul>
     <li *ngIf="userIsAuthenticated">
-      <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Samples</a>
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">Sample Disease</a>
     </li>
     <li *ngIf="!userIsAuthenticated">
-      <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
     </li>
     <li *ngIf="!userIsAuthenticated">
-      <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a>
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Signup</a>
     </li>
     <li *ngIf="userIsAuthenticated">
       <button mat-button (click)="onLogout()">Logout</button>

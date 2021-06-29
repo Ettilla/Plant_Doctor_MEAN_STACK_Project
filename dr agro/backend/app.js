@@ -11,7 +11,10 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://ena:f2M2JLwL6Y9oqBfj@dragro.ccc9a.mongodb.net/node-angular"
+    "mongodb+srv://ena:" +
+    process.env.MONGO_ATLAS_PW +
+    "@dragro.ccc9a.mongodb.net/node-angular",
+    {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
   )
   .then(() => {
     console.log("Connected to database!");
