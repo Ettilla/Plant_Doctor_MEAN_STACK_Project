@@ -1,7 +1,7 @@
 # Plant_Doctor_MEAN_Stack_Project
 
 Here I have tried to build a FULLSTACK project. 
-I have used MEAN STACK here where Angular is for frontend, Node.js, Express.js for backend & MongoDB for Database.
+I have used MEAN STACK for this purpose, where Angular is for frontend, Node.js, Express.js for backend & MongoDB for Database. MongoDB Atlas database service is used here.
 For building up the entire project, I took help from different tutorials on YouTube along with different blog posts. I have also mentioned them below.
 
 
